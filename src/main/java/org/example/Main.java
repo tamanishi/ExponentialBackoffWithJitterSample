@@ -11,7 +11,6 @@ public class Main {
         Random random = new Random();
 
         for (int retryCount = 0; retryCount < retryLimit; retryCount++) {
-
             int tempInterval = (int)Math.min(intervalCap, Math.pow(baseInterval * 2, retryCount)) * 1000;
             System.out.println("temp : " + tempInterval);
             int interval = tempInterval * 9 / 10 + random.nextInt(0, tempInterval / 10);
